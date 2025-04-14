@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NetDrop - Tool Info</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        :root {
+            --bg-color: #121212;
+            --text-color: #e0e0e0;
+            --card-bg: #1e1e1e;
+            --card-border: #2a2a2a;
+            --hover-bg: #333;
+            --primary-btn: #2563eb;
+            --secondary-btn: #10b981;
+            --accent: #8b5cf6;
+            --code-bg: #2d2d2d;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--text-color);
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .header h1::before {
+            content: "\f0c2";
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+            margin-right: 15px;
+            color: var(--accent);
+            font-size: 2.5rem;
+        }
+
+        .section {
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .section h2 {
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: var(--text-color);
+            margin-top: 0;
+            border-bottom: 2px solid var(--accent);
+            padding-bottom: 10px;
+        }
+
+        .section p, .section li {
+            font-size: 1rem;
+            color: var(--text-color);
+        }
+
+        .section ul {
+            padding-left: 20px;
+        }
+
+        .section li {
+            margin-bottom: 10px;
+        }
+
+        .code-block {
+            background: var(--code-bg);
+            border-radius: 8px;
+            padding: 15px;
+            font-family: 'Courier New', Courier, monospace;
+            color: #f0f0f0;
+            overflow-x: auto;
+            margin: 10px 0;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: var(--primary-btn);
+            color: #fff;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 500;
+            transition: background 0.2s ease;
+        }
+
+        .btn:hover {
+            background-color: #1d4ed8;
+        }
+
+        .footer {
+            text-align: center;
+            font-size: 0.9rem;
+            color: #888;
+            margin-top: 40px;
+        }
+
+        .footer a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 600px) {
+            .header h1 {
+                font-size: 2rem;
+            }
+
+            .section h2 {
+                font-size: 1.5rem;
+            }
+
+            .section p, .section li {
+                font-size: 0.9rem;
+            }
+
+            .container {
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>NetDrop</h1>
+        </div>
+
+        <div class="section">
+            <h2>About NetDrop</h2>
+            <p>
+                <strong>NetDrop</strong> is a lightweight, secure, and user-friendly tool for sharing files over a local network. Built with Flask and SocketIO, it allows users to upload, download, and manage files effortlessly through a modern web interface. With features like QR code access, real-time file updates, and password-protected authentication, NetDrop makes file sharing fast and intuitive.
+            </p>
+        </div>
+
+        <div class="section">
+            <h2>How It Works</h2>
+            <p>NetDrop operates as a local web server, enabling file sharing within your network. Here's how it functions:</p>
+            <ul>
+                <li><strong>Start the Server:</strong> Run the Python script to launch the NetDrop server on your machine.</li>
+                <li><strong>Access via Browser:</strong> Open the provided URL (e.g., <code>http://your-ip:5000</code>) or scan the QR code to access the web interface.</li>
+                <li><strong>Authenticate:</strong> Enter the default OTP password (2812) to log in. You can modify this in the code for added security.</li>
+                <li><strong>Upload Files:</strong> Select and upload files through the interface. Files are stored in the <code>Uploads</code> folder.</li>
+                <li><strong>Manage Files:</strong> View, download, or delete files. Real-time updates ensure the file list stays current.</li>
+                <li><strong>Share Access:</strong> Others on the same network can access the interface using the URL or QR code, provided they have the password.</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Installation</h2>
+            <p>To set up NetDrop, follow these steps:</p>
+            <ol>
+                <li><strong>Clone the Repository:</strong>
+                    <div class="code-block">
+                        git clone https://github.com/Shuuubhraj/NetDrop.git<br>
+                        cd NetDrop
+                    </div>
+                </li>
+                <li><strong>Install Dependencies:</strong> Run the following command to install all required Python packages:
+                    <div class="code-block">
+                        pip install flask flask-socketio pillow qrcode
+                    </div>
+                </li>
+                <li><strong>Run the Tool:</strong>
+                    <div class="code-block">
+                        python netdrop.py
+                    </div>
+                </li>
+                <li><strong>Access NetDrop:</strong> Open your browser and navigate to the URL displayed in the terminal (e.g., <code>http://192.168.x.x:5000</code>), or scan the QR code.</li>
+            </ol>
+        </div>
+
+        <div class="section">
+            <h2>System Requirements</h2>
+            <ul>
+                <li><strong>Operating System:</strong> Windows, macOS, or Linux</li>
+                <li><strong>Python:</strong> Python 3.6 or higher</li>
+                <li><strong>Dependencies:</strong> Flask, Flask-SocketIO, Pillow, qrcode (installed via pip)</li>
+                <li><strong>Network:</strong> Local network connectivity for file sharing</li>
+                <li><strong>Browser:</strong> Any modern web browser (Chrome, Firefox, Safari, etc.)</li>
+                <li><strong>Storage:</strong> Sufficient disk space for uploaded files</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Important Notes</h2>
+            <ul>
+                <li><strong>Security:</strong> The default password is <code>2812</code>. Change it in the <code>netdrop.py</code> file (<code>OTP_PASSWORD</code> variable) for production use.</li>
+                <li><strong>Network Access:</strong> Ensure all devices are on the same local network. Firewall settings may need adjustment to allow port 5000.</li>
+                <li><strong>File Storage:</strong> Files are stored in the <code>Uploads</code> folder. Monitor disk space for large uploads.</li>
+                <li><strong>Performance:</strong> Large file transfers may be limited by network speed and device performance.</li>
+                <li><strong>QR Code:</strong> Use the QR code feature to quickly share the access URL with other devices.</li>
+                <li><strong>Real-Time Updates:</strong> File uploads and deletions are reflected instantly across all connected clients via SocketIO.</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Author</h2>
+            <p>
+                <strong>Name:</strong> Rajput Shubhraj Singh<br>
+                <strong>GitHub:</strong> <a href="https://github.com/Shuuubhraj" target="_blank">@Shuuubhraj</a><br>
+                
+            </p>
+            <a href="https://github.com/Shuuubhraj/NetDrop" class="btn">Visit Repository</a>
+        </div>
+
+        <div class="footer">
+            <p>NetDrop &copy; 2025 by <a href="https://github.com/Shuuubhraj">Rajput Shubhraj Singh</a>. All rights reserved.</p>
+        </div>
+    </div>
+</body>
+</html>
