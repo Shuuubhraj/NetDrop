@@ -8,19 +8,20 @@ NetDrop is a lightweight, secure, and user-friendly tool for sharing files over 
 
 Here is a screenshot of the app's main interface:
 
-[![Screenshot 1](https://imgur.com/yuKtWIF)](https://imgur.com/yuKtWIF)
+[![Screenshot 1](https://i.imgur.com/yuKtWIF.png)](https://i.imgur.com/yuKtWIF.png)
 
 ### Screenshot 2
 
-This screenshot demonstrates how files appear 
+This screenshot demonstrates how files appear:
 
-[![Screenshot 2](https://imgur.com/In87BkU)](https://imgur.com/In87BkU)
+[![Screenshot 2](https://i.imgur.com/In87BkU.png)](https://i.imgur.com/In87BkU.png)
 
 ### Screenshot 3
 
-This screenshot shows QR Code Functionality 
+This screenshot shows QR Code Functionality:
 
-[![Screenshot 3](https://imgur.com/In87BkU)](https://imgur.com/In87BkU)
+[![Screenshot 3](https://i.imgur.com/In87BkU.png)](https://i.imgur.com/In87BkU.png)
+
 
 ## Features
 - **Secure Authentication:** Password-protected access with a configurable OTP.
@@ -67,7 +68,7 @@ This screenshot shows QR Code Functionality
 - **GitHub:** [@Shuuubhraj](https://github.com/Shuuubhraj
 
 ## Detailed Documentation
-For a visually styled version, see the [README.html](README.html) file.
+For a visually styled version, see the [ReadME.html](ReadME.html) file.
 
 
 ## Contributing
