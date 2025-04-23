@@ -29,8 +29,8 @@ This screenshot demonstrates how files appear:
 This screenshot shows QR Code Functionality:
 
 <div align="center">
-  <a href="https://i.imgur.com/In87BkU.png" target="_blank">
-    <img src="https://i.imgur.com/In87BkU.png" width="700"/>
+  <a href="https://imgur.com/a/FN0GxmD.png" target="_blank">
+    <img src="https://imgur.com/a/FN0GxmD.png" width="700"/>
   </a>
 </div>
 
